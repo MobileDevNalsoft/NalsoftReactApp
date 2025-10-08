@@ -235,10 +235,27 @@ html {
   color: #FC5546;
 }
 
+/* Service Item Icons */
+.service-item .title i {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
 /* Hover Effects */
-.hover-content:hover {
-  transform: translateY(-5px);
+.service-item.hover-content .inner-content {
+  display: block !important;
+  position: relative;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(20px);
   transition: all 0.3s ease;
+}
+
+.service-item.hover-content:hover .inner-content {
+  opacity: 1;
+  max-height: 150px;
+  transform: translateY(0);
 }
 
 /* AOS Animation Fixes */

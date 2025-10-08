@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './styles/fonts.css';
 import './styles/bootstrap.min.css';
 import './styles/all.min.css';
+import './styles/flaticon.min.css';
 import './styles/style.css';
 import './styles/style_1.css';
 import './styles/oracle-integration.css';
