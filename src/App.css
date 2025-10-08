@@ -238,7 +238,8 @@ html {
 /* Service Item Icons */
 .service-item .title i {
   font-size: 22px;
-  margin-right: 8px;
+  margin-right: 6px !important;
+  /* margin-top: 0px !important  ; */
 }
 
 /* Hover Effects */
