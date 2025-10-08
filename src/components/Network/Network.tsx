@@ -47,7 +47,7 @@ const Network: React.FC = () => {
   }, []);
 
   return (
-    <section className="our-network-area pt-130 rpt-100 pb-100 rpb-70 rel z-1" id="network">
+    <section className="our-network-area pt-30 rpt-100 pb-100 rpb-70 rel z-1" id="network">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-10">

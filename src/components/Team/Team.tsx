@@ -104,19 +104,21 @@ const Team: React.FC = () => {
         <div className="team-slider">
           <Slider {...settings}>
             {teamMembers.concat(teamMembers).map((member, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="px-2"  style={{ borderRadius: '16px', overflow: 'hidden' }}>
                 <div 
                   className="team-item style-two" 
                   data-aos="fade-up" 
                   data-aos-delay={(index % 4 + 1) * 100} 
                   data-aos-duration="1500" 
                   data-aos-offset="50"
+                    style={{ borderRadius: '16px !important' }}
                 >
                   <div className="image">
                     <img 
                       decoding="async" 
                       src={member.image} 
                       alt={member.name} 
+                      style={{ borderRadius: '16px 16px 0px 0px' , overflow:'hidden' }}
                     />
                     <div className="icon">
                       <i className="far fa-plus"></i>
