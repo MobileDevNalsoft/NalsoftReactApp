@@ -1,0 +1,65 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('../assets/fonts/ethnocentric-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Awesome Icons */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/fa-regular-400.woff2') format('woff2'),
+         url('../assets/fonts/fa-regular-400.woff') format('woff'),
+         url('../assets/fonts/fa-regular-400.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../assets/fonts/fa-solid-900.woff2') format('woff2'),
+         url('../assets/fonts/fa-solid-900.woff') format('woff'),
+         url('../assets/fonts/fa-solid-900.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/fa-brands-400.woff2') format('woff2'),
+         url('../assets/fonts/fa-brands-400.woff') format('woff'),
+         url('../assets/fonts/fa-brands-400.ttf') format('truetype');
+}
+
+/* Flaticon */
+@font-face {
+    font-family: 'Flaticon';
+    src: url('../assets/fonts/flaticon_uintech.eot');
+    src: url('../assets/fonts/flaticon_uintech.eot#iefix') format('embedded-opentype'),
+         url('../assets/fonts/flaticon_uintech.woff2') format('woff2'),
+         url('../assets/fonts/flaticon_uintech.woff') format('woff'),
+         url('../assets/fonts/flaticon_uintech.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Elementor Icons */
+@font-face {
+    font-family: 'eicons';
+    src: url('../assets/fonts/eicons.eot');
+    src: url('../assets/fonts/eicons.eot#iefix') format('embedded-opentype'),
+         url('../assets/fonts/eicons.woff2') format('woff2'),
+         url('../assets/fonts/eicons.woff') format('woff'),
+         url('../assets/fonts/eicons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
