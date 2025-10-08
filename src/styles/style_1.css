@@ -36,14 +36,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  gap: 15px;
   padding: 8px 12px;
   background: rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-.hero-text-slider .slick-dots li { margin: 0; }
+.hero-text-slider .slick-dots li { margin: 0 10px; }
 .hero-text-slider .slick-dots li button {
   width: 15px;
   height: 15px;
@@ -4675,7 +4675,7 @@ body.woocommerce-cart .cart-collaterals .wc-proceed-to-checkout {
 .wc-block-cart {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 20px;
 	margin-bottom: 50px;
 }
 
@@ -4900,4 +4900,364 @@ body.woocommerce-cart .cart-collaterals .wc-proceed-to-checkout {
 .woocommerce.single-product div.product .entry-summary .woocommerce-product-rating .star-rating,
 .woocommerce ul.products .woocommerce-product-inner .star-rating{
 	color: var(--nalsoft-primary-color);
+/* Service Item Hover Animation */
+.service-item.hover-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-item.hover-content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.service-item.hover-content .image img {
+  transition: transform 0.3s ease;
+}
+
+.service-item.hover-content:hover .image img {
+  transform: scale(1.1);
+}
+
+.service-item.hover-content .content {
+  transition: transform 0.3s ease;
+}
+
+.service-item.hover-content:hover .content {
+  transform: translateY(-10px);
+}
+
+/* Rounded corners for Modern IT Solutions images */
+.bgc-blue .service-item .image img {
+  border-radius: 12px;
+}
+
+/* Rounded corners for Media & News images */
+.blog-area .blog-item .image img {
+  border-radius: 12px !important;
+}
+
+/* Sticky Header */
+.tekprof-site-header.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Rounded corners for Latest Insight & Articles images */
+body .blog-area .blog-item .image,
+body .blog-area .blog-item .image img,
+body .latest-blog .blog-item .image,
+body .latest-blog .blog-item .image img,
+body .blog-standard-item .image,
+body .blog-standard-item .image img {
+  border-radius: 12px !important;
+}
+body .blog-area .blog-item .image,
+body .latest-blog .blog-item .image,
+body .blog-standard-item .image {
+  overflow: hidden !important;
+}
+
+/* Enforce rounded corners for Latest Insight & Articles (strong override) */
+body .blog-area .blog-item .image,
+body .blog-area .blog-item .image a,
+body .blog-area .blog-item .image picture,
+body .latest-blog .blog-item .image,
+body .latest-blog .blog-item .image a,
+body .latest-blog .blog-item .image picture,
+body .blog-standard-item .image,
+body .blog-standard-item .image a,
+body .blog-standard-item .image picture {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  isolation: isolate; /* ensure ::after overlays are clipped */
+  -webkit-clip-path: inset(0 round 12px);
+          clip-path: inset(0 round 12px);
+}
+
+body .blog-area .blog-item .image img,
+body .blog-area .blog-item .image a img,
+body .blog-area .blog-item .image picture img,
+body .latest-blog .blog-item .image img,
+body .latest-blog .blog-item .image a img,
+body .latest-blog .blog-item .image picture img,
+body .blog-standard-item .image img,
+body .blog-standard-item .image a img,
+body .blog-standard-item .image picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px !important;
+  -webkit-clip-path: inset(0 round 12px);
+          clip-path: inset(0 round 12px);
+}
+
+/* If image is applied as background on .image, clip that box too */
+body .blog-area .blog-item .image,
+body .latest-blog .blog-item .image,
+body .blog-standard-item .image {
+  background-clip: padding-box;
+}
+}
+
+/* FINAL: Mirror NalsoftWebApp hover for Empowering Businesses */
+body .features-area-two .feature-item.style-two { position: relative; }
+body .features-area-two .feature-item.style-two .image {
+  position: relative;
+  overflow: hidden !important;
+  z-index: 1;
+}
+body .features-area-two .feature-item.style-two .image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateZ(0);
+  will-change: transform, filter;
+  transition: transform .45s ease, filter .45s ease !important;
+}
+
+/* Bottom gradient for readability */
+body .features-area-two .feature-item.style-two .image::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0; height: 55%;
+  background: linear-gradient(180deg, rgba(11,12,12,0) 0%, rgba(11,12,12,.78) 100%);
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Content panel slides up from bottom */
+body .features-area-two .feature-item.style-two .content {
+  position: absolute !important;
+  left: 0 !important; right: 0 !important; bottom: 0 !important;
+  width: 100% !important; z-index: 2 !important;
+  padding: 25px 35px;
+  background: transparent !important;
+  transform: translateY(36px) !important;
+  transition: transform .35s ease !important;
+}
+body .features-area-two .feature-item.style-two .content .title a,
+body .features-area-two .feature-item.style-two .content p,
+body .features-area-two .feature-item.style-two .content .details-btn,
+body .features-area-two .feature-item.style-two .content .tags a { color: #fff !important; }
+
+/* Hover (and JS .is-hovered fallback) */
+body .features-area-two .feature-item.style-two:hover .image img,
+body .features-area-two .feature-item.style-two.is-hovered .image img { transform: scale(1.05) !important; }
+body .features-area-two .feature-item.style-two:hover .content,
+body .features-area-two .feature-item.style-two.is-hovered .content { transform: translateY(0) !important; }
+
+/* Prevent clipping by grid cols */
+body .features-area-two .col-xxl-4,
+body .features-area-two .col-md-6 { overflow: visible !important; }
+
+@media (max-width: 575px) {
+  body .features-area-two .feature-item.style-two .content {
+    padding: 18px 22px;
+    transform: translateY(24px) !important;
+  }
+}
+
+/* Align hover animation timing/feel with Services (Transforming Business Operations) */
+.features-area-two .feature-item.style-two,
+.features-area-two .feature-item.style-two .content,
+.features-area-two .feature-item.style-two .image img {
+  transition: 0.5s ease !important; /* match service-two timing */
+}
+/* Subtle lift + shadow on hover like service cards */
+.features-area-two .feature-item.style-two:hover,
+.features-area-two .feature-item.style-two.is-hovered {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+/* Keep text readable over gradient; do not change UI copy */
+.features-area-two .feature-item.style-two:hover .content .title a,
+.features-area-two .feature-item.style-two:hover .content p,
+.features-area-two .feature-item.style-two:hover .content .tags a,
+.features-area-two .feature-item.style-two:hover .content .details-btn { color: #fff !important; }
+
+/* Rounded corners for Why Choose Nalsoft images */
+body .why-choose-images img,
+body .why-choose-three-image img {
+  display: block;
+  border-radius: 12px !important;
+}
+
+/* Rounded corners for Modern IT Solutions images */
+body .features-area-two .feature-item .image,
+body .features-area-two .feature-item .image img {
+  border-radius: 12px !important;
+}
+body .features-area-two .feature-item .image { overflow: hidden; }
+
+/* Force-rounded corners for Modern IT Solutions (features-area-two) */
+body .features-area-two .feature-item.style-two .image,
+body .features-area-two .feature-item.style-two .image img {
+  border-radius: 16px !important;
+}
+body .features-area-two .feature-item.style-two .image {
+  overflow: hidden !important;
+  /* Mask in case of overlay stacking */
+  -webkit-clip-path: inset(0 round 16px);
+          clip-path: inset(0 round 16px);
+}
+body .features-area-two .feature-item.style-two .image img {
+  display: block;
+}
+
+/* Rounded corners for the 4 cards in Modern IT Solutions */
+body .services-area .service-item .image,
+body .services-area .service-item .image img,
+body .services-area.style-two .service-item-two .image,
+body .services-area.style-two .service-item-two .image img,
+body .features-area-two .feature-item .image,
+body .features-area-two .feature-item .image img {
+  border-radius: 16px !important;
+}
+body .services-area .service-item .image,
+body .services-area.style-two .service-item-two .image,
+body .features-area-two .feature-item .image {
+  overflow: hidden !important;
+}
+
+/* Equal height for content below images (before hover) */
+/* Modern IT Solutions overlay content baseline height */
+body .features-area-two .feature-item.style-two .content {
+  min-height: 180px; /* ensures consistent baseline before hover */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Services tiles under the images (icons + titles) */
+body .services-area.style-two .service-item-two {
+  min-height: 200px; /* unify tile heights */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (max-width: 575px) {
+  body .features-area-two .feature-item.style-two .content { min-height: 150px; }
+  body .services-area.style-two .service-item-two { min-height: 140px; }
+}
+
+/* Force equal height for Services tiles (under Modern IT Solutions) */
+body .services-area .service-two-item,
+body .services-area.style-two .service-two-item,
+body .services-area.style-two .service-item-two {
+  min-height: 200px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+/* If wrapped in grid columns, ensure the card stretches */
+body .services-area .col,
+body .services-area [class*="col-"] {
+  display: flex;
+}
+body .services-area .col > .service-two-item,
+body .services-area [class*="col-"] > .service-two-item,
+body .services-area [class*="col-"] > .service-item-two {
+  width: 100%;
+}
+
+/* Equalize heights for the 4 service tiles under images */
+/* Stretch columns so cards can fill available height */
+body .services-area.style-two .row > [class*="col-"] { display: flex; }
+body .services-area.style-two .row > [class*="col-"] > * { width: 100%; }
+
+/* Make the card fill column height and use flex layout */
+body .services-area.style-two .service-two-item,
+body .services-area.style-two .service-item-two {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  height: 100% !important;
+  min-height: 220px !important; /* baseline */
+}
+
+/* Normalize heading block height to avoid line-wrap differences */
+body .services-area.style-two .service-two-item h5,
+body .services-area.style-two .service-item-two h5,
+body .services-area.style-two .service-two-item h6,
+body .services-area.style-two .service-item-two h6 {
+  min-height: 56px; /* ~2 lines at 24-28px */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Keep icon+title spacing consistent */
+body .services-area.style-two .service-two-item .icon,
+body .services-area.style-two .service-item-two .icon {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 575px) {
+  body .services-area.style-two .service-two-item,
+  body .services-area.style-two .service-item-two { min-height: 200px !important; }
+  body .services-area.style-two .service-two-item h5,
+  body .services-area.style-two .service-item-two h5,
+  body .services-area.style-two .service-two-item h6,
+  body .services-area.style-two .service-item-two h6 { min-height: 48px; }
+}
+
+/* Remove brand color from footer toggles/buttons */
+body footer .theme-btn,
+body .site-footer .theme-btn,
+body .nalsoft-site-footer .theme-btn,
+body footer .menu-sidebar > button,
+body footer .nav-search > button,
+body .site-footer .menu-sidebar > button,
+body .site-footer .nav-search > button {
+  background: transparent !important;
+  color: inherit !important;
+  border-color: currentColor !important;
+  box-shadow: none !important;
+}
+
+/* If any CSS variable-driven paint is used on toggles, neutralize it in footer */
+body footer .menu-sidebar > button { --c: none !important; }
+
+/* Hide the "Toggle Brand Color" button in footer */
+body footer button[aria-label*="Toggle Brand Color"],
+body footer [title*="Toggle Brand Color"],
+body .site-footer button[aria-label*="Toggle Brand Color"],
+body .nalsoft-site-footer button[aria-label*="Toggle Brand Color"],
+/* common fallback if it's inside a menu-sidebar slot in footer */
+body footer .menu-sidebar > button.theme-toggle,
+body .site-footer .menu-sidebar > button.theme-toggle,
+body .nalsoft-site-footer .menu-sidebar > button.theme-toggle,
+body footer .menu-sidebar > button.color-toggle,
+body .site-footer .menu-sidebar > button.color-toggle,
+body .nalsoft-site-footer .menu-sidebar > button.color-toggle,
+body footer .menu-sidebar > button.brand-toggle,
+body .site-footer .menu-sidebar > button.brand-toggle,
+body .nalsoft-site-footer .menu-sidebar > button.brand-toggle,
+/* last resort - hide any menu-sidebar brand color toggle in footer only */
+body footer .menu-sidebar > button[title*="Toggle"],
+body .site-footer .menu-sidebar > button[title*="Toggle"],
+body .nalsoft-site-footer .menu-sidebar > button[title*="Toggle"] {
+  display: none !important;
 }

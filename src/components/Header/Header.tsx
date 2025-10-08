@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MenuItem } from '../../types';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHiddenBarOpen, setIsHiddenBarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isSticky, setIsSticky] = useState(false);
 
   const servicesMenu: MenuItem[] = [
     { text: 'Cloud Implementations', href: 'https://nalsoft.net/services/cloud-implementations/' },
@@ -67,9 +68,19 @@ const Header: React.FC = () => {
     setActiveDropdown(null);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsSticky(scrollTop > 100); // Adjust threshold as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <header className="tekprof-site-header">
+      <header className={`tekprof-site-header ${isSticky ? 'sticky' : ''}`}>
         <div className="main-header">
           <div className="header-upper">
             <div className="container clearfix">

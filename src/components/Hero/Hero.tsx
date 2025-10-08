@@ -107,12 +107,11 @@ const Hero: React.FC = () => {
                           alignItems: 'center'
                         }}
                       >
-                        <div className="container" style={{ padding: '40px' }}>
-                          <span className="sub-title mb-15">{slide.subtitle}</span>
+                        <div className="container" style={{ padding: '40px', textAlign: 'left' }}>
                           <h2>{slide.title}</h2>
                           <p>{slide.description}</p>
-                          <a 
-                            href={slide.buttonLink} 
+                          <a
+                            href={slide.buttonLink}
                             className="theme-btn mt-15"
                             onClick={(e) => handleButtonClick(slide.buttonLink, e)}
                           >

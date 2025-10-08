@@ -254,7 +254,7 @@ html {
 
 .service-item.hover-content:hover .inner-content {
   opacity: 1;
-  max-height: 150px;
+  max-height: 180px;
   transform: translateY(0);
 }
 
