@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NalsoftReactApp/static/css/main.40b1f8ae.css",
-    "main.js": "/NalsoftReactApp/static/js/main.3c7aa3e1.js",
+    "main.js": "/NalsoftReactApp/static/js/main.47d9c1b3.js",
     "static/js/453.96fadf82.chunk.js": "/NalsoftReactApp/static/js/453.96fadf82.chunk.js",
     "static/media/fa-light-300.svg": "/NalsoftReactApp/static/media/fa-light-300.329ac15a79cc35c363f6.svg",
     "static/media/fa-regular-400_1.svg": "/NalsoftReactApp/static/media/fa-regular-400_1.18658d17d9e38ca06895.svg",
@@ -52,11 +52,11 @@
     "static/media/slick.ttf": "/NalsoftReactApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/NalsoftReactApp/static/media/slick.295183786cd8a1389865.woff",
     "main.40b1f8ae.css.map": "/NalsoftReactApp/static/css/main.40b1f8ae.css.map",
-    "main.3c7aa3e1.js.map": "/NalsoftReactApp/static/js/main.3c7aa3e1.js.map",
+    "main.47d9c1b3.js.map": "/NalsoftReactApp/static/js/main.47d9c1b3.js.map",
     "453.96fadf82.chunk.js.map": "/NalsoftReactApp/static/js/453.96fadf82.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40b1f8ae.css",
-    "static/js/main.3c7aa3e1.js"
+    "static/js/main.47d9c1b3.js"
   ]
 }
