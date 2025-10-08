@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { StatItem } from '../../types';
 
@@ -15,7 +15,7 @@ const Statistics: React.FC = () => {
     triggerOnce: true
   });
 
-  const stats: (StatItem & { key: string; target: number })[] = [
+  const stats: (StatItem & { key: string; target: number })[] = useMemo(() => ([
     {
       key: 'implementations',
       count: '200',
@@ -44,7 +44,7 @@ const Statistics: React.FC = () => {
       title: 'On-time Rollouts',
       target: 100
     }
-  ];
+  ]), []);
 
   useEffect(() => {
     if (inView) {
@@ -52,7 +52,7 @@ const Statistics: React.FC = () => {
         animateCounter(stat.key, stat.target, 3000);
       });
     }
-  }, [inView]);
+  }, [inView, stats]);
 
   const animateCounter = (key: string, target: number, duration: number) => {
     const start = 0;
@@ -79,18 +79,18 @@ const Statistics: React.FC = () => {
   };
 
   return (
-    <section 
-      className="achievement-area bgc-blue bgs-cover pt-100 rpt-70 pb-130 rpb-130 rel z-1" 
+    <section
+      className="achievement-area bgc-blue bgs-cover pt-100 rpt-70 pb-130 rpb-130 rel z-1"
       style={{ backgroundImage: 'url(/static/images/achievement-bg.jpg)' }}
       ref={ref}
     >
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-lg-5">
-            <div 
-              className="achievement-content text-white rmb-55" 
-              data-aos="fade-left" 
-              data-aos-duration="1500" 
+            <div
+              className="achievement-content text-white rmb-55"
+              data-aos="fade-left"
+              data-aos-duration="1500"
               data-aos-offset="50"
             >
               <div className="section-title mb-30">
@@ -98,12 +98,12 @@ const Statistics: React.FC = () => {
                 <h2>Trusted Partner for Oracle Applications & Solutions</h2>
               </div>
               <p>
-                Nalsoft is a dynamic and fast-growing IT service provider that has been supporting the digital 
-                transformation of its customers for over 2 decades. Headquartered in Dubai with offshore 
+                Nalsoft is a dynamic and fast-growing IT service provider that has been supporting the digital
+                transformation of its customers for over 2 decades. Headquartered in Dubai with offshore
                 development center in Hyderabad, India.
               </p>
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 className="theme-btn mt-20"
                 onClick={handleLearnMoreClick}
               >
@@ -111,23 +111,25 @@ const Statistics: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="col-lg-6">
-            <div 
-              className="achievement-counter bg-white" 
-              data-aos="fade-right" 
-              data-aos-duration="1500" 
+            <div
+              className="achievement-counter bg-white border overflow-hidden"
+              style={{ borderRadius: '16px' }}
+              data-aos="fade-right"
+              data-aos-duration="1500"
               data-aos-offset="50"
             >
-              <div className="row no-gap">
+              <div className="row no-gap " style={{ borderRadius: '16px' }}>
                 {stats.map((stat, index) => (
-                  <div key={stat.key} className="col-sm-6">
-                    <div 
-                      className="counter-item" 
-                      data-aos="zoom-in" 
-                      data-aos-delay="50" 
-                      data-aos-duration="1500" 
+                  <div key={stat.key} className="col-sm-6 ">
+                    <div
+                      className="counter-item"
+                      data-aos="zoom-in"
+                      data-aos-delay="50"
+                      data-aos-duration="1500"
                       data-aos-offset="50"
+                      style={{ borderRadius: '0px', border: '0px ' }}
                     >
                       <div className="counter-text-wrap">
                         <span className="count-text">

@@ -8873,6 +8873,22 @@ h6,
   content: '%';
 }
 
+/* Stats section: rounded orange border on hover for counter items */
+.achievement-counter .counter-item {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 16px !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-counter .counter-item:after {
+  border-radius: inherit; /* ensure hover overlay respects rounding */
+}
+
+.achievement-counter .counter-item:hover {
+  border-color: #fd7e14; /* bootstrap orange */
+}
+
 @media only screen and (min-width: 1400px) {
   .statistics-two-content {
     padding-left: 50px;
@@ -9005,6 +9021,7 @@ h6,
   max-width: 216px;
   background: var(--nalsoft-primary-color);
   padding: 34px 20px 15px 35px;
+  
 }
 
 .why-choose-three-image .team-member i {
