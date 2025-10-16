@@ -81,7 +81,7 @@ const Statistics: React.FC = () => {
   return (
     <section
       className="achievement-area bgc-blue bgs-cover pt-100 rpt-70 pb-130 rpb-130 rel z-1"
-      style={{ backgroundImage: 'url(/static/images/achievement-bg.jpg)' }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/static/images/achievement-bg.jpg)` }}
       ref={ref}
     >
       <div className="container">

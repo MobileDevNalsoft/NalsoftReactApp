@@ -6,21 +6,21 @@ const Features: React.FC = () => {
     {
       title: 'Assessment and Strategy Development',
       description: 'We implemented multi-layered cybersecurity measures including firewall protection, real-time threat',
-      image: '/static/images/feature-two1.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/feature-two1.jpg`,
       tags: ['Cyber Security'],
       link: '#features'
     },
     {
       title: 'Enhanced Cybersecurity Protocols solutions',
       description: 'We implemented multi-layered cybersecurity measures including firewall protection, real-time threat',
-      image: '/static/images/feature-two2.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/feature-two2.jpg`,
       tags: ['IT Service'],
       link: '#features'
     },
     {
       title: 'Enhanced Cybersecurity Protocols solutions',
       description: 'We implemented multi-layered cybersecurity measures including firewall protection, real-time threat',
-      image: '/static/images/feature-two3.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/feature-two3.jpg`,
       tags: ['Cloud'],
       link: '#features'
     }

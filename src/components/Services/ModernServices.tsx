@@ -7,28 +7,28 @@ const ModernServices: React.FC = () => {
       title: 'Managed IT Services',
       description: 'Comprehensive support for all aspects of your IT infrastructure, including monitoring, maintenance, and technical support.',
       icon: 'flaticon-it',
-      image: '/static/images/service1.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/service1.jpg`,
       link: '#services'
     },
     {
       title: 'Cybersecurity Services',
       description: 'Comprehensive support for all aspects of your IT infrastructure, including monitoring, maintenance, and technical support.',
       icon: 'flaticon-network-security',
-      image: '/static/images/service2.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/service2.jpg`,
       link: '#services'
     },
     {
       title: 'Cloud Solutions',
       description: 'Comprehensive support for all aspects of your IT infrastructure, including monitoring, maintenance, and technical support.',
       icon: 'flaticon-cloud',
-      image: '/static/images/service3.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/service3.jpg`,
       link: '#services'
     },
     {
       title: 'Data Backup & Recovery',
       description: 'Comprehensive support for all aspects of your IT infrastructure, including monitoring, maintenance, and technical support.',
       icon: 'flaticon-data-management',
-      image: '/static/images/service4.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/service4.jpg`,
       link: '#services'
     }
   ];

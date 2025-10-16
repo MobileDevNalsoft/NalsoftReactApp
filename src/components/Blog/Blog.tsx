@@ -6,7 +6,7 @@ const Blog: React.FC = () => {
     {
       title: 'Cybersecurity Essentials Protecting Business from Emerging Threats',
       description: 'Highlights clear problem-solution-result narrative, demonstrating agency\'s ability to provide.',
-      image: '/static/images/blog1.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/blog1.jpg`,
       category: 'IT Consulting',
       date: '16 April 2025',
       link: '#blog'
@@ -14,7 +14,7 @@ const Blog: React.FC = () => {
     {
       title: 'The Ultimate Guide to Choosing the Right IT Solutions Partner',
       description: 'Highlights clear problem-solution-result narrative, demonstrating agency\'s ability to provide.',
-      image: '/static/images/blog2.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/blog2.jpg`,
       category: 'Business Continuity',
       date: '29 May 2025',
       link: '#blog'
@@ -22,7 +22,7 @@ const Blog: React.FC = () => {
     {
       title: 'The Importance of Data Backup and Disaster Recovery Plans',
       description: 'Highlights clear problem-solution-result narrative, demonstrating agency\'s ability to provide.',
-      image: '/static/images/blog3.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/blog3.jpg`,
       category: 'Cloud Computing',
       date: '29 May 2025',
       link: '#blog'

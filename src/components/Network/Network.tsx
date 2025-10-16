@@ -7,7 +7,7 @@ const Network: React.FC = () => {
     if (presenceMap) {
       presenceMap.style.backgroundImage = `
         radial-gradient(#e5e7eb 1px, rgba(0,0,0,0) 1px),
-        url('/static/images/World-map.png')
+        url('${process.env.PUBLIC_URL}/static/images/World-map.png')
       `;
       presenceMap.style.backgroundSize = '14px 14px, 100% 100%';
       presenceMap.style.backgroundPosition = '0 0, center center';

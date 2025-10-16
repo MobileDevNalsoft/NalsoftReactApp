@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         <div className="container container-1500">
           <div 
             className="footer-top pt-70 pb-40 rpt-60 px-4 bgs-cover" 
-            style={{ backgroundImage: 'url(/static/images/get-consultation-bg.jpg)' }}
+            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/static/images/get-consultation-bg.jpg)` }}
           >
             <div className="container">
               <div className="row align-items-center">
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                 <div className="footer-logo mb-30">
                   <a href="#" onClick={(e) => { e.preventDefault(); handleScrollToTop(); }}>
                     <img 
-                      src="/static/images/nalsoft_logo.png" 
+                      src={`${process.env.PUBLIC_URL}/static/images/nalsoft_logo.png`} 
                       width="168" 
                       height="40" 
                       alt="Nalsoft" 

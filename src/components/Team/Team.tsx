@@ -7,7 +7,7 @@ const Team: React.FC = () => {
     {
       name: 'David R. Watkins',
       designation: 'IT Consultant',
-      image: '/static/images/member1.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/member1.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -17,7 +17,7 @@ const Team: React.FC = () => {
     {
       name: 'James K. Andrews',
       designation: 'UI Designer',
-      image: '/static/images/member2.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/member2.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -27,7 +27,7 @@ const Team: React.FC = () => {
     {
       name: 'Kenneth B. Hebert',
       designation: 'HR Support',
-      image: '/static/images/member3.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/member3.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -37,7 +37,7 @@ const Team: React.FC = () => {
     {
       name: 'Alexander M. Burris',
       designation: 'Product Designer',
-      image: '/static/images/member4.jpg',
+      image: `${process.env.PUBLIC_URL}/static/images/member4.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
