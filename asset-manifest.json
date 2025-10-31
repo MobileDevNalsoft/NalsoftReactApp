@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NalsoftReactApp/static/css/main.40b1f8ae.css",
-    "main.js": "/NalsoftReactApp/static/js/main.47d9c1b3.js",
+    "main.css": "/NalsoftReactApp/static/css/main.6359c6b1.css",
+    "main.js": "/NalsoftReactApp/static/js/main.7f89c7bf.js",
     "static/js/453.96fadf82.chunk.js": "/NalsoftReactApp/static/js/453.96fadf82.chunk.js",
     "static/media/fa-light-300.svg": "/NalsoftReactApp/static/media/fa-light-300.329ac15a79cc35c363f6.svg",
     "static/media/fa-regular-400_1.svg": "/NalsoftReactApp/static/media/fa-regular-400_1.18658d17d9e38ca06895.svg",
@@ -43,20 +43,17 @@
     "static/media/flaticon_uintech.woff2": "/NalsoftReactApp/static/media/flaticon_uintech.a8fc9b9af4284dde1079.woff2",
     "static/media/fa-regular-400.woff2": "/NalsoftReactApp/static/media/fa-regular-400.68c5af1f48e2bfca1e57.woff2",
     "static/media/arrow-shape.png": "/NalsoftReactApp/static/media/arrow-shape.be29efb6c69947ab841b.png",
-    "static/media/faq-dot-shape.png": "/NalsoftReactApp/static/media/faq-dot-shape.be29efb6c69947ab841b.png",
-    "static/media/icon-bg.png": "/NalsoftReactApp/static/media/icon-bg.be29efb6c69947ab841b.png",
-    "static/media/work-process-arrow.png": "/NalsoftReactApp/static/media/work-process-arrow.be29efb6c69947ab841b.png",
     "index.html": "/NalsoftReactApp/index.html",
     "static/media/slick.svg": "/NalsoftReactApp/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/NalsoftReactApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/NalsoftReactApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/NalsoftReactApp/static/media/slick.295183786cd8a1389865.woff",
-    "main.40b1f8ae.css.map": "/NalsoftReactApp/static/css/main.40b1f8ae.css.map",
-    "main.47d9c1b3.js.map": "/NalsoftReactApp/static/js/main.47d9c1b3.js.map",
+    "main.6359c6b1.css.map": "/NalsoftReactApp/static/css/main.6359c6b1.css.map",
+    "main.7f89c7bf.js.map": "/NalsoftReactApp/static/js/main.7f89c7bf.js.map",
     "453.96fadf82.chunk.js.map": "/NalsoftReactApp/static/js/453.96fadf82.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40b1f8ae.css",
-    "static/js/main.47d9c1b3.js"
+    "static/css/main.6359c6b1.css",
+    "static/js/main.7f89c7bf.js"
   ]
 }
