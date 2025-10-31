@@ -1,13 +1,25 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { TeamMember } from '../../types';
+import './Team.css';
 
 const Team: React.FC = () => {
+  const founder: TeamMember = {
+    name: 'Anita R. Kapoor',
+    designation: 'Founder & CEO',
+    image: `${process.env.PUBLIC_URL}/static/images/team/founder.jpg`,
+    socialLinks: {
+      facebook: '#',
+      twitter: '#',
+      instagram: '#'
+    }
+  };
+
   const teamMembers: TeamMember[] = [
     {
       name: 'David R. Watkins',
       designation: 'IT Consultant',
-      image: `${process.env.PUBLIC_URL}/static/images/member1.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/team/member1.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -17,7 +29,7 @@ const Team: React.FC = () => {
     {
       name: 'James K. Andrews',
       designation: 'UI Designer',
-      image: `${process.env.PUBLIC_URL}/static/images/member2.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/team/member2.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -27,7 +39,7 @@ const Team: React.FC = () => {
     {
       name: 'Kenneth B. Hebert',
       designation: 'HR Support',
-      image: `${process.env.PUBLIC_URL}/static/images/member3.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/team/member3.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -37,7 +49,7 @@ const Team: React.FC = () => {
     {
       name: 'Alexander M. Burris',
       designation: 'Product Designer',
-      image: `${process.env.PUBLIC_URL}/static/images/member4.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/team/member4.jpg`,
       socialLinks: {
         facebook: '#',
         twitter: '#',
@@ -101,6 +113,64 @@ const Team: React.FC = () => {
           </div>
         </div>
         
+        <div className="founder-section">
+          <div className="row justify-content-center">
+            <div className="col-lg-5 col-md-7">
+              <div 
+                className="founder-card" 
+                data-aos="fade-up" 
+                data-aos-duration="1500" 
+                data-aos-offset="50"
+              >
+                <div className="team-item style-two">
+                  <div className="image">
+                    <img
+                      decoding="async"
+                      src={founder.image}
+                      alt={founder.name}
+                    />
+                    <div className="icon">
+                      <i className="far fa-plus"></i>
+                      <div className="social-style-one">
+                        {founder.socialLinks.facebook && (
+                          <a
+                            href={founder.socialLinks.facebook}
+                            onClick={(e) => handleSocialClick(founder.socialLinks.facebook!, e)}
+                          >
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                        )}
+                        {founder.socialLinks.twitter && (
+                          <a
+                            href={founder.socialLinks.twitter}
+                            onClick={(e) => handleSocialClick(founder.socialLinks.twitter!, e)}
+                          >
+                            <i className="fab fa-twitter"></i>
+                          </a>
+                        )}
+                        {founder.socialLinks.instagram && (
+                          <a
+                            href={founder.socialLinks.instagram}
+                            onClick={(e) => handleSocialClick(founder.socialLinks.instagram!, e)}
+                          >
+                            <i className="fab fa-instagram"></i>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content">
+                    <h4 className="name">
+                      <span>{founder.name}</span>
+                    </h4>
+                    <span className="designations">{founder.designation}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="team-slider">
           <Slider {...settings}>
             {teamMembers.concat(teamMembers).map((member, index) => (

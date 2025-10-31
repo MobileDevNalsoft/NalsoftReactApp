@@ -26,7 +26,6 @@ import ModernServices from './components/Services/ModernServices';
 import Statistics from './components/About/Statistics';
 import Team from './components/Team/Team';
 import Network from './components/Network/Network';
-import Features from './components/Features/Features';
 import Testimonials from './components/Testimonials/Testimonials';
 import Clients from './components/Clients/Clients';
 import Blog from './components/Blog/Blog';
@@ -72,7 +71,6 @@ const App: React.FC = () => {
             <Statistics />
             <Team />
             <Network />
-            <Features />
             <Testimonials />
             <Clients />
             <Blog />

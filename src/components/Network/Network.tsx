@@ -1,136 +1,121 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import './Network.css';
 
+// Define the structure for a location
+interface Location {
+  id: number;
+  name: string;
+  country: string;
+  region: string;
+  type: 'headquarters' | 'office' | 'development-hub';
+  description: string;
+  backgroundImage: string;
+}
+
+// Main Network component
 const Network: React.FC = () => {
-  useEffect(() => {
-    // Add map background image
-    const presenceMap = document.getElementById('presenceMap');
-    if (presenceMap) {
-      presenceMap.style.backgroundImage = `
-        radial-gradient(#e5e7eb 1px, rgba(0,0,0,0) 1px),
-        url('${process.env.PUBLIC_URL}/static/images/World-map.png')
-      `;
-      presenceMap.style.backgroundSize = '14px 14px, 100% 100%';
-      presenceMap.style.backgroundPosition = '0 0, center center';
-      presenceMap.style.backgroundRepeat = 'repeat, no-repeat';
-    }
-    
-    // Add zoom functionality
-    const zoomInBtn = presenceMap?.querySelector('button[aria-label="zoom in"]') as HTMLButtonElement;
-    const zoomOutBtn = presenceMap?.querySelector('button[aria-label="zoom out"]') as HTMLButtonElement;
-    
-    if (zoomInBtn && zoomOutBtn && presenceMap) {
-      let currentZoom = 1;
-      
-      const handleZoomIn = () => {
-        if (currentZoom < 2) {
-          currentZoom += 0.2;
-          presenceMap.style.transform = `scale(${currentZoom})`;
-        }
-      };
-      
-      const handleZoomOut = () => {
-        if (currentZoom > 0.5) {
-          currentZoom -= 0.2;
-          presenceMap.style.transform = `scale(${currentZoom})`;
-        }
-      };
-      
-      zoomInBtn.addEventListener('click', handleZoomIn);
-      zoomOutBtn.addEventListener('click', handleZoomOut);
-      
-      // Cleanup function
-      return () => {
-        zoomInBtn.removeEventListener('click', handleZoomIn);
-        zoomOutBtn.removeEventListener('click', handleZoomOut);
-      };
-    }
-  }, []);
+  const [activeLocation, setActiveLocation] = useState<number | null>(null);
+
+  // Location data
+  const locations: Location[] = [
+    {
+      id: 1,
+      name: 'Dubai',
+      country: 'UAE',
+      region: 'Middle East',
+      type: 'headquarters',
+      description: 'Our global headquarters driving innovation and strategic vision across all operations.',
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/locations/dubai.jpg`,
+    },
+    {
+      id: 2,
+      name: 'Hyderabad',
+      country: 'India',
+      region: 'South Asia',
+      type: 'development-hub',
+      description: 'Primary development center with cutting-edge technology expertise and innovation labs.',
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/locations/hyderabad.jpg`,
+    },
+    {
+      id: 3,
+      name: 'Riyadh',
+      country: 'Saudi Arabia',
+      region: 'Middle East',
+      type: 'office',
+      description: 'Regional office serving clients across the Kingdom with dedicated support teams.',
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/locations/saudi.jpg`,
+    },
+    {
+      id: 4,
+      name: 'Doha',
+      country: 'Qatar',
+      region: 'Middle East',
+      type: 'office',
+      description: 'Strategic office supporting our growing presence in the Gulf region.',
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/locations/qatar.jpg`,
+    },
+  ];
+
 
   return (
-    <section className="our-network-area pt-30 rpt-100 pb-100 rpb-70 rel z-1" id="network">
+    <section className="our-presence-area pt-60 rpt-100 pb-60 rpb-70" id="network">
       <div className="container">
+        {/* Section Title */}
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-10">
-            <div 
-              className="section-title text-center mb-50" 
-              data-aos="fade-up" 
-              data-aos-duration="1500" 
+            <div
+              className="section-title text-center mb-60"
+              data-aos="fade-up"
+              data-aos-duration="1500"
               data-aos-offset="50"
             >
-              <span className="sub-title color-primary mb-10">Our Network</span>
-              <h2>Our Presence</h2>
+              <span className="sub-title color-primary mb-10">Our Global Presence</span>
+              <h2>Connecting the World, One Project at a Time</h2>
+              <p className="mt-20">
+                From our headquarters in Dubai to our development hubs and regional offices, 
+                we maintain a strategic global presence to serve our clients better.
+              </p>
             </div>
           </div>
         </div>
-        
-        <div className="row align-items-center gap-60">
-          <div 
-            className="col-lg-4 col-12" 
-            data-aos="fade-right" 
-            data-aos-duration="1500" 
-            data-aos-offset="50"
-          >
-            <ul className="list-style-one mt-25">
-              <li>
-                <i className="far fa-check"></i> Head Quartered in Dubai
-              </li>
-              <li>
-                <i className="far fa-check"></i> Development Center in India
-              </li>
-              <li>
-                <i className="far fa-check"></i> Clientele across India & GCC
-              </li>
-            </ul>
-          </div>
-          
-          <div 
-            className="col-lg-8 col-12" 
-            data-aos="fade-left" 
-            data-aos-duration="1500" 
-            data-aos-offset="50"
-          >
-            <div className="presence-card">
-              <div className="presence-map" id="presenceMap">
-                {/* Dubai location marker */}
-                <span 
-                  className="presence-marker dubai-marker" 
-                  style={{ left: '62.3%', top: '52%' }}
-                >
-                  <div className="marker-tooltip">
-                    Nalsoft Dubai - Headquarters<br />
-                    Business Bay, UAE<br />
-                    25.2048° N, 55.2708° E
-                  </div>
-                </span>
+
+        {/* Location Cards */}
+        <div className="row g-4">
+          {locations.map((location, index) => (
+            <div 
+              key={location.id} 
+              className="col-lg-6 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay={100 * (index + 1)}
+            >
+              <div
+                className={`presence-card ${activeLocation === location.id ? 'active' : ''} ${location.type}`}
+                onClick={() => setActiveLocation(activeLocation === location.id ? null : location.id)}
+                onMouseEnter={() => setActiveLocation(location.id)}
+                onMouseLeave={() => setActiveLocation(null)}
+                style={{
+                  backgroundImage: `url(${location.backgroundImage})`,
+                }}
+              >
+                <div className="presence-card-overlay"></div>
                 
-                {/* Hyderabad location marker */}
-                <span 
-                  className="presence-marker hyderabad-marker" 
-                  style={{ left: '70%', top: '56%' }}
-                >
-                  <div className="marker-tooltip">
-                    Nalsoft Hyderabad - Development Center<br />
-                    HITEC City, India<br />
-                    17.4485° N, 78.3824° E
+                <div className="presence-card-body">
+                  <h3 className="location-name">{location.name}</h3>
+                  <div className="location-meta">
+                    <span className="country">{location.country}</span>
+                    <span className="separator">•</span>
+                    <span className="region">{location.region}</span>
                   </div>
-                </span>
-                
-                <div className="presence-zoom">
-                  <button type="button" aria-label="zoom in">+</button>
-                  <button type="button" aria-label="zoom out">−</button>
+                  <p className="location-description">{location.description}</p>
+                </div>
+
+                <div className="presence-card-footer">
+                  <div className="connection-line"></div>
                 </div>
               </div>
-              
-              <div className="presence-legend">
-                <span className="presence-pill">
-                  <span className="presence-dot dubai"></span> Dubai, UAE
-                </span>
-                <span className="presence-pill">
-                  <span className="presence-dot hyderabad"></span> Hyderabad, India
-                </span>
-              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -47,14 +47,6 @@ export interface BlogItem {
   link: string;
 }
 
-export interface FeatureItem {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  link: string;
-}
-
 export interface ClientLogo {
   name: string;
   image: string;

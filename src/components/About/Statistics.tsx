@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { StatItem } from '../../types';
+import './Statistics.css';
 
 const Statistics: React.FC = () => {
   const [counters, setCounters] = useState<{ [key: string]: number }>({

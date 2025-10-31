@@ -7,28 +7,28 @@ const Services: React.FC = () => {
       title: 'Oracle ERP Cloud',
       description: 'Comprehensive ERP for finance, procurement, and projects.',
       icon: 'flaticon-it',
-      image: `${process.env.PUBLIC_URL}/static/images/why-choose1.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/services/oracle-erp-cloud.png`,
       link: '#services'
     },
     {
       title: 'Oracle HCM Cloud',
       description: 'HCM for talent acquisition, performance, and workforce planning.',
       icon: 'flaticon-network-security',
-      image: `${process.env.PUBLIC_URL}/static/images/why-choose2.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/services/oracle-hcm-cloud.png`,
       link: '#services'
     },
     {
       title: 'Oracle SCM Cloud',
       description: 'Supply Chain for inventory, logistics, and procurement.',
       icon: 'flaticon-cloud',
-      image: `${process.env.PUBLIC_URL}/static/images/why-choose3.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/services/oracle-scm-cloud.png`,
       link: '#services'
     },
     {
       title: 'Oracle EPM Cloud',
       description: 'Planning, budgeting, and performance management.',
       icon: 'flaticon-cloud',
-      image: `${process.env.PUBLIC_URL}/static/images/why-choose4.jpg`,
+      image: `${process.env.PUBLIC_URL}/static/images/services/oracle-epm-cloud.png`,
       link: '#services'
     }
   ];

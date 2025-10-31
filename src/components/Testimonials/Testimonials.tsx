@@ -12,7 +12,7 @@ const Testimonials: React.FC = () => {
       author: {
         name: 'Robert S. Hummel',
         designation: 'CEO & Founder',
-        image: `${process.env.PUBLIC_URL}/static/images/testi-author1.jpg`
+        image: `${process.env.PUBLIC_URL}/static/images/team/testi-author1.jpg`
       }
     },
     {
@@ -21,7 +21,7 @@ const Testimonials: React.FC = () => {
       author: {
         name: 'Leonard G. Trahan',
         designation: 'Web Designer',
-        image: `${process.env.PUBLIC_URL}/static/images/testi-author2.jpg`
+        image: `${process.env.PUBLIC_URL}/static/images/team/testi-author2.jpg`
       }
     },
     {
@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
       author: {
         name: 'Robert S. Hummel',
         designation: 'CEO & Founder',
-        image: `${process.env.PUBLIC_URL}/static/images/testi-author1.jpg`
+        image: `${process.env.PUBLIC_URL}/static/images/team/testi-author1.jpg`
       }
     },
     {
@@ -39,7 +39,7 @@ const Testimonials: React.FC = () => {
       author: {
         name: 'Leonard G. Trahan',
         designation: 'Web Designer',
-        image: `${process.env.PUBLIC_URL}/static/images/testi-author2.jpg`
+        image: `${process.env.PUBLIC_URL}/static/images/team/testi-author2.jpg`
       }
     }
   ];
@@ -77,7 +77,7 @@ const Testimonials: React.FC = () => {
       <div className="container-fluid">
         <div 
           className="testimonials-inner pt-130 rpt-100 pb-100 rpb-70 bgs-cover" 
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/static/images/testimonials-bg.jpg)` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/static/images/backgrounds/testimonials-bg.jpg)` }}
         >
           <div className="container">
             <div className="row justify-content-between align-items-end pb-30">

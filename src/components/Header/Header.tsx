@@ -253,7 +253,7 @@ const Header: React.FC = () => {
                 </div>
 
                 <img 
-                  src={`${process.env.PUBLIC_URL}/static/images/Oracle-Partner-logo-black-300x89.png`} 
+                  src={`${process.env.PUBLIC_URL}/static/images/logos/Oracle-Partner-logo-black-300x89.png`} 
                   alt="Oracle Partner" 
                   className="oracle-partner-logo-small me-3" 
                   style={{ height: '45px', width: 'auto', paddingLeft: '10px' }} 
@@ -291,7 +291,7 @@ const Header: React.FC = () => {
             <ul>
               <li>
                 <div className="image">
-                  <img src={`${process.env.PUBLIC_URL}/static/images/01-80x64.jpg`} alt="Recent Post" />
+                  <img src={`${process.env.PUBLIC_URL}/static/images/misc/01-80x64.jpg`} alt="Recent Post" />
                 </div>
                 <div className="content">
                   <h5><a href="#blog">Why Your Business Needs..</a></h5>

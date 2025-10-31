@@ -6,67 +6,67 @@ const Clients: React.FC = () => {
   const clientLogos: ClientLogo[] = [
     {
       name: 'Client 1',
-      image: `${process.env.PUBLIC_URL}/static/images/client-1.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-1.png`,
       link: '#'
     },
     {
       name: 'Client 2',
-      image: `${process.env.PUBLIC_URL}/static/images/client-2.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-2.png`,
       link: '#'
     },
     {
       name: 'Client 3',
-      image: `${process.env.PUBLIC_URL}/static/images/client-3.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-3.png`,
       link: '#'
     },
     {
       name: 'Client 4',
-      image: `${process.env.PUBLIC_URL}/static/images/client-4.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-4.png`,
       link: '#'
     },
     {
       name: 'Client 5',
-      image: `${process.env.PUBLIC_URL}/static/images/client-5.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-5.png`,
       link: '#'
     },
     {
       name: 'Client 6',
-      image: `${process.env.PUBLIC_URL}/static/images/client-6.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-6.png`,
       link: '#'
     },
     {
       name: 'Client 7',
-      image: `${process.env.PUBLIC_URL}/static/images/client-7.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-7.png`,
       link: '#'
     },
     {
       name: 'Client 8',
-      image: `${process.env.PUBLIC_URL}/static/images/client-8.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-8.png`,
       link: '#'
     },
     {
       name: 'Client 9',
-      image: `${process.env.PUBLIC_URL}/static/images/client-9.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-9.png`,
       link: '#'
     },
     {
       name: 'Client 10',
-      image: `${process.env.PUBLIC_URL}/static/images/client-10.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-10.png`,
       link: '#'
     },
     {
       name: 'Client 11',
-      image: `${process.env.PUBLIC_URL}/static/images/client-11.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-11.png`,
       link: '#'
     },
     {
       name: 'Client 12',
-      image: `${process.env.PUBLIC_URL}/static/images/client-12.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-12.png`,
       link: '#'
     },
     {
       name: 'Client 13',
-      image: `${process.env.PUBLIC_URL}/static/images/client-13.png`,
+      image: `${process.env.PUBLIC_URL}/static/images/clients/client-13.png`,
       link: '#'
     }
   ];

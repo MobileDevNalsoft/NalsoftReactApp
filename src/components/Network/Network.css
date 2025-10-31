@@ -1,0 +1,383 @@
+/* Our Presence Section Styles */
+.our-presence-area {
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  overflow: hidden;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.our-presence-area .section-title {
+  margin-bottom: 35px !important;
+}
+
+.our-presence-area .section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.our-presence-area .section-title p {
+  font-size: 15px;
+}
+
+/* Statistics Cards */
+.presence-stat-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  border: 1px solid rgba(252, 85, 70, 0.1);
+}
+
+.presence-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(252, 85, 70, 0.15);
+}
+
+.stat-number {
+  font-size: 42px;
+  font-weight: 700;
+  color: #FC5546;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Presence Cards */
+.presence-card {
+  background: #f5f5f5;
+  border-radius: 16px;
+  padding: 25px;
+  min-height: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.presence-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FC5546 0%, #ff8a80 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.presence-card:hover::before,
+.presence-card.active::before {
+  transform: scaleX(1);
+}
+
+.presence-card:hover,
+.presence-card.active {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-color: #FC5546;
+}
+
+/* Card Overlay */
+.presence-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.presence-card:hover .presence-card-overlay,
+.presence-card.active .presence-card-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+/* Card Header */
+.presence-card-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.presence-badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: #FC5546;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(252, 85, 70, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.presence-card.headquarters .presence-badge,
+.presence-card.development-hub .presence-badge,
+.presence-card.office .presence-badge {
+  background: rgba(252, 85, 70, 0.95);
+  color: white;
+  border-color: rgba(252, 85, 70, 0.8);
+}
+
+/* Card Body */
+.presence-card-body {
+  margin-top: auto;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+.location-name {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.presence-card:hover .location-name,
+.presence-card.active .location-name {
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.location-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.location-meta .country {
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.location-meta .separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.location-meta .region {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.location-description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+/* Card Footer */
+.presence-card-footer {
+  position: relative;
+  margin-top: auto;
+  padding-top: 12px;
+  z-index: 2;
+}
+
+.connection-line {
+  height: 3px;
+  background: linear-gradient(90deg, #FC5546 0%, rgba(252, 85, 70, 0.3) 100%);
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  box-shadow: 0 2px 8px rgba(252, 85, 70, 0.4);
+}
+
+.presence-card:hover .connection-line,
+.presence-card.active .connection-line {
+  transform: scaleX(1);
+}
+
+/* Unified professional hover effects for all office types */
+.presence-card.headquarters:hover .connection-line,
+.presence-card.headquarters.active .connection-line,
+.presence-card.development-hub:hover .connection-line,
+.presence-card.development-hub.active .connection-line,
+.presence-card.office:hover .connection-line,
+.presence-card.office.active .connection-line {
+  background: linear-gradient(90deg, #FC5546 0%, rgba(252, 85, 70, 0.3) 100%);
+  box-shadow: 0 2px 12px rgba(252, 85, 70, 0.6);
+}
+
+/* Unified professional hover effects for location names */
+.presence-card.headquarters:hover .location-name,
+.presence-card.headquarters.active .location-name,
+.presence-card.development-hub:hover .location-name,
+.presence-card.development-hub.active .location-name,
+.presence-card.office:hover .location-name,
+.presence-card.office.active .location-name {
+  text-shadow: 0 0 20px rgba(252, 85, 70, 0.8);
+}
+
+/* CTA Section */
+.presence-cta {
+  background: linear-gradient(135deg, #FC5546 0%, #ff8a80 100%);
+  padding: 50px 40px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 40px rgba(252, 85, 70, 0.3);
+}
+
+.presence-cta h4 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.presence-cta p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-presence {
+  display: inline-block;
+  background: white;
+  color: #FC5546;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.btn-presence:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  background: #f8f8f8;
+  color: #FC5546;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .presence-card {
+    margin-bottom: 20px;
+    height: auto;
+    min-height: 240px;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+  
+  .location-name {
+    font-size: 22px;
+  }
+  
+  .presence-cta h4 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .presence-stat-card {
+    margin-bottom: 15px;
+  }
+  
+  .presence-card {
+    padding: 20px;
+    height: auto;
+    min-height: 220px;
+  }
+  
+  .location-name {
+    font-size: 20px;
+  }
+  
+  .location-description {
+    font-size: 12px;
+  }
+  
+  .presence-cta {
+    padding: 40px 30px;
+  }
+  
+  .presence-cta h4 {
+    font-size: 24px;
+  }
+  
+  .presence-cta p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .stat-number {
+    font-size: 32px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+  }
+  
+  .presence-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+/* Animation for cards appearing */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.presence-card {
+  animation: slideInUp 0.6s ease-out;
+}

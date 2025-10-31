@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
 
   const heroSlides: HeroSlide[] = [
     {
-      backgroundImage: `${process.env.PUBLIC_URL}/static/images/curosel_3.jpg`,
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/misc/curosel_3.jpg`,
       subtitle: 'Oracle Partner',
       title: 'Trusted Partner for Oracle Applications & Solutions',
       description: 'Nalsoft is a dynamic and fast-growing IT service provider that has been supporting the digital transformation of its customers for over 2 decades. With over 300+ experienced professionals and exclusive focus on Oracle applications & technologies.',
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       buttonLink: '#services'
     },
     {
-      backgroundImage: `${process.env.PUBLIC_URL}/static/images/curosel_2.jpg`,
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/misc/curosel_2.jpg`,
       subtitle: 'Oracle Partner',
       title: '23+ Years of Successfully Delivering Solutions Across Verticals',
       description: 'Experience across Manufacturing, BFSI, Real Estate, Retail & Trading, Hospitality and more.',
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
       buttonLink: '#services'
     },
     {
-      backgroundImage: `${process.env.PUBLIC_URL}/static/images/curosel_1.jpg`,
+      backgroundImage: `${process.env.PUBLIC_URL}/static/images/misc/curosel_1.jpg`,
       subtitle: 'Oracle Partner',
       title: 'Drive Your Digital Transformation Journey With Us',
       description: 'Modernize and scale with Oracle ERP, HCM, SCM, CX and EPM delivered by certified experts.',

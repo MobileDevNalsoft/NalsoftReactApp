@@ -21,10 +21,10 @@ const About: React.FC = () => {
   ];
 
   const images = [
-    `${process.env.PUBLIC_URL}/static/images/why-choose1.jpg`,
-    `${process.env.PUBLIC_URL}/static/images/why-choose2.jpg`,
-    `${process.env.PUBLIC_URL}/static/images/why-choose3.jpg`,
-    `${process.env.PUBLIC_URL}/static/images/why-choose4.jpg`
+    `${process.env.PUBLIC_URL}/static/images/services/why-choose1.png`,
+    `${process.env.PUBLIC_URL}/static/images/services/why-choose-grid2.png`,
+    `${process.env.PUBLIC_URL}/static/images/services/why-choose3.png`,
+    `${process.env.PUBLIC_URL}/static/images/services/why-choose4.png`
   ];
 
   const handleLearnMoreClick = (e: React.MouseEvent) => {
